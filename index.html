@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaGona</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Header -->
+<header class="header">
+    <!-- Navigation -->
+    <nav class="nav">
+        <h2 class="logo">LaGona</h2>
+        
+        <!-- Hamburger Menu Button (Mobile Only) -->
+        <button class="hamburger" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Main -->
+<main class="main">
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <h1>Discover Amazing Places in Laguna</h1>
+        <p>Explore nature, lakes, and hidden gems of Laguna.</p>
+    </section>
+
+    <!-- Destinations -->
+    <section class="section" id="destinations">
+        <h2>Popular Destinations</h2>
+        <p>Explore top spots around Laguna.</p>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="/images/mt-makiling.avif" width="300" height="200" alt="Mt. Makiling">
+                <h3>Mt. Makiling</h3>
+                <p>A legendary mountain perfect for hiking and nature trips.</p>
+            </div>
+
+            <div class="card">
+                <img src="/images/dampalit-falls.avif" width="300" height="200" alt="Dampalit Falls">
+                <h3>Dampalit Falls</h3>
+                <p>A modern eco-city with biking trails and relaxing views.</p>
+            </div>
+
+            <div class="card">
+                <img src="/images/yambo-lake.avif" width="300" height="200" alt="Yambo Lake">
+                <h3>Yambo Lake</h3>
+                <p>A peaceful twin lake surrounded by mountains.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" id="gallery">
+        <h2>Photo Gallery</h2>
+        <p>See Laguna’s beauty through these photos.</p>
+
+        <div class="gallery">
+            <img src="/images/mt-makiling.avif" width="200" height="150" alt="Laguna view">
+            <img src="/images/dampalit-falls.avif" width="200" height="150" alt="Laguna nature">
+            <img src="/images/yambo-lake.avif" width="200" height="150" alt="Laguna travel">
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <h2>Contact Us</h2>
+    <p>Get in touch for travel info.</p>
+    <p>Email: travel@gmail.com</p>
+</footer>
+
+<script>
+  // Hamburger Menu Toggle
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Close menu when a link is clicked
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+</script>
+
+</body>
+</html>
